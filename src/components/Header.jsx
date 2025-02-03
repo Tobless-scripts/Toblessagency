@@ -8,6 +8,7 @@ import instagram from "../assets/instagram.png";
 import twitter from "../assets/twitter.png";
 import facebook from "../assets/facebook-image.jpg";
 import backgroundImage from "../assets/backgroundImage.webp";
+import arrow from "../assets/arrowUp.png";
 
 function Header() {
     const [showExplanation, setShowExplanation] = useState(false);
@@ -37,6 +38,23 @@ function Header() {
         } else {
             header.classList.remove("sticky");
         }
+
+        const scrollToTop = document.getElementById("scrollToTop");
+        if (
+            document.body.scrollTop > 500 ||
+            document.documentElement.scrollTop > 500
+        ) {
+            scrollToTop.style.display = "block";
+        } else {
+            scrollToTop.style.display = "none";
+        }
+    };
+
+    let scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     };
 
     return (
@@ -99,6 +117,13 @@ function Header() {
             <div>
                 {showNavigation && <Navigation onClose={closeNavigation} />}
             </div>
+
+            <img
+                src={arrow}
+                alt="arrowCircle"
+                onClick={scrollToTop}
+                id="scrollToTop"
+            ></img>
         </div>
     );
 }

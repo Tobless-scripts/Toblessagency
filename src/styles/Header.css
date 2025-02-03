@@ -279,6 +279,20 @@ body {
     top: 0;
 }
 
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 100;
+    width: 2.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(29, 31, 40, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1000px) {
     .explanation-container {
         width: 100%;
