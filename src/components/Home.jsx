@@ -16,6 +16,7 @@ import project2 from "../assets/blog-2-700.jpg";
 import project3 from "../assets/blog-4.jpg";
 import project4 from "../assets/blog-5-630-1.jpg";
 import project5 from "../assets/project8.jpg";
+import Footer from "./Footer";
 
 function Home() {
     return (
@@ -25,6 +26,7 @@ function Home() {
             <WhatWeDo />
             <Works />
             <Team />
+            <Footer />
         </div>
     );
 }
@@ -128,25 +130,33 @@ function Works() {
             <div className="project-container">
                 <div className="project-content">
                     <div className="projects">
-                        <img src={project1} alt="project1" />
+                        <div className="image-wrapper">
+                            <img src={project1} alt="project1" />
+                        </div>
                         <h2>TRUE SNEAKERS</h2>
                         <p>Brand Design, Photography</p>
                     </div>
 
                     <div className="projects moveDown2">
-                        <img src={project2} alt="project1" />
+                        <div className="image-wrapper">
+                            <img src={project2} alt="project2" />
+                        </div>
                         <h2>PENCILS OF ART</h2>
                         <p>3D Design, Brand Design</p>
                     </div>
 
                     <div className="projects">
-                        <img src={project3} alt="project1" />
+                        <div className="image-wrapper">
+                            <img src={project3} alt="project3" />
+                        </div>
                         <h2>MODELLING PHOTOS</h2>
                         <p>3D Design, Photography</p>
                     </div>
 
                     <div className="projects moveDown2">
-                        <img src={project4} alt="project1" />
+                        <div className="image-wrapper">
+                            <img src={project4} alt="project4" />
+                        </div>
                         <h2>HAPPY GIRL</h2>
                         <p>3D Design, Photography</p>
                     </div>
@@ -156,7 +166,9 @@ function Works() {
                     </div>
 
                     <div className="projects moveDown2">
-                        <img src={project5} alt="project1" />
+                        <div className="image-wrapper">
+                            <img src={project5} alt="project5" />
+                        </div>
                         <h2>MINIMAL DESIGN</h2>
                         <p>3D Design, Photography</p>
                     </div>

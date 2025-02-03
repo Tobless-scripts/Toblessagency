@@ -67,12 +67,49 @@
 
 .projects {
     height: 45em;
+    z-index: 1;
+    cursor: pointer;
 }
 
-.projects img {
+.image-wrapper {
+    position: relative;
     height: 40em;
     width: 100%;
-    margin-bottom: 1rem;
+}
+
+.image-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-wrapper:hover::after {
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.image-wrapper:hover::after {
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("../assets/add.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .projects h2 {
@@ -80,6 +117,7 @@
     font-weight: 700;
     font-size: 1.3rem;
     line-height: 31px;
+    margin-top: 1rem;
 }
 
 .projects p {
@@ -87,6 +125,7 @@
     font-weight: 400;
     line-height: 20px;
     font-size: 0.9rem;
+    margin-top: 0;
 }
 
 .projects h1 {
@@ -171,8 +210,8 @@
 
 .slant {
     background-color: rgb(18, 20, 29);
-    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-    padding: 15rem 0;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    padding: 15rem 0 5rem 0;
 }
 
 .standout h2,
@@ -409,8 +448,12 @@
         height: 35em;
     }
 
-    .projects img {
+    .image-wrapper {
         height: 30em;
+    }
+
+    .projects img {
+        height: 100%;
     }
 }
 
@@ -488,11 +531,11 @@
 
 @media screen and (max-width: 576px) {
     .projects {
-        height: 30em;
+        height: 35em;
     }
 
-    .projects img {
-        height: 25em;
+    .image-wrapper {
+        height: 30em;
     }
     .works {
         padding: 5rem 1rem 9rem 1rem;
