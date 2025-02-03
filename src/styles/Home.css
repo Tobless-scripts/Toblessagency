@@ -1,0 +1,289 @@
+.hero {
+    padding: 3rem;
+}
+
+.hero h1 {
+    font-weight: 700;
+    line-height: 67px;
+    font-size: 2.8rem;
+    color: black;
+    max-width: 65%;
+}
+
+.hero h1 span {
+    color: rgb(2, 207, 201);
+    font-weight: 700;
+}
+
+.hero p {
+    color: rgb(85, 85, 85);
+    font-weight: 300;
+    font-size: 1.5rem;
+    max-width: 34%;
+    margin: 1.5rem 0;
+}
+
+.whatFlex {
+    background-color: rgb(18, 20, 29);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 48%);
+    gap: 3rem;
+    padding: 5rem 3rem;
+}
+
+.what-we-do {
+    width: 100%;
+}
+
+.slant {
+    background-color: rgb(18, 20, 29);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    padding: 15rem 0;
+}
+
+.standout h2 {
+    color: rgb(2, 207, 201);
+    font-weight: 400;
+    line-height: 29px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 3rem 0;
+}
+
+.standout h1 {
+    color: #fff;
+    font-weight: 700;
+    line-height: 47px;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.standout p {
+    font-weight: 300;
+    line-height: 29px;
+    color: white;
+    font-size: 1.05rem;
+}
+
+.standout button {
+    font-weight: 600;
+    line-height: 21px;
+    color: black;
+    background-color: rgb(2, 207, 201);
+    font-size: 1rem;
+    border: none;
+    padding: 1rem 1.5rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.standout button:hover {
+    background-color: #1d1f28;
+    color: white;
+}
+
+.experience {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 45%);
+    gap: 3rem;
+}
+
+.experience-card,
+.experience-card2 {
+    background-color: #1d1f28;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    padding: 5rem 2rem;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+    z-index: 2;
+    position: relative;
+}
+
+.experience-card2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: brightness(80%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.experience-card2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 207, 201, 0);
+    z-index: 2;
+    pointer-events: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.experience-card2:hover::after {
+    background-color: rgba(2, 207, 201, 0.5);
+}
+
+.experience-card:hover {
+    background-color: rgb(2, 207, 201);
+}
+
+.moveDown {
+    transform: translateY(15%);
+}
+
+.experience-card:hover img {
+    transform: scale(1);
+}
+
+.experience-card img {
+    width: 5em;
+    transform: scale(0.9);
+}
+
+.experience-card h2,
+.experience-card2 h2 {
+    font-weight: 700;
+    line-height: 31px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.experience-card:hover h2 {
+    color: #1d1f28;
+}
+
+.experience-card p,
+.experience-card2 p {
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.experience-card:hover p {
+    color: #1d1f28;
+}
+
+.card-child {
+    position: absolute;
+    bottom: 0;
+    margin: 5rem 0 3rem 0;
+    z-index: 4;
+}
+
+.experience-card2:hover .media {
+    visibility: visible;
+}
+
+#twitter {
+    width: 1.5rem;
+}
+
+.media {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.media-child2 img {
+    width: 2.5rem;
+    cursor: pointer;
+    filter: contrast(200%);
+}
+
+.media-child2 {
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+        max-width: 100%;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .whatFlex {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        padding: 5rem 2.5rem;
+    }
+
+    .standout h2 {
+        font-size: 1.2rem;
+    }
+
+    .standout h1 {
+        font-size: 1.7rem;
+    }
+
+    .standout p {
+        font-size: 0.9rem;
+    }
+
+    .experience {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        text-align: left;
+    }
+    .moveDown {
+        transform: translateY(0);
+    }
+    .whatFlex {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .hero h1 {
+        font-size: 2.5rem;
+        max-width: 100%;
+        line-height: 45px;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .whatFlex {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        padding: 5rem 2.5rem;
+    }
+    .whatFlex {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

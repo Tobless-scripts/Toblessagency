@@ -1,0 +1,241 @@
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+import close from "../assets/closeMenu.svg";
+import "../styles/Header.css";
+import { useState } from "react";
+import propTypes from "prop-types";
+import instagram from "../assets/instagram.png";
+import twitter from "../assets/twitter.png";
+import facebook from "../assets/facebook-image.jpg";
+import backgroundImage from "../assets/backgroundImage.webp";
+
+function Header() {
+    const [showExplanation, setShowExplanation] = useState(false);
+
+    const toggleExplanation = () => {
+        setShowExplanation(!showExplanation);
+    };
+
+    const closeExplanation = () => {
+        setShowExplanation(false);
+    };
+
+    const [showNavigation, setShowNavigation] = useState(false);
+
+    const toggleNavigation = () => {
+        setShowNavigation(!showNavigation);
+    };
+
+    const closeNavigation = () => {
+        setShowNavigation(false);
+    };
+
+    window.onscroll = function () {
+        var header = document.querySelector(".header");
+        if (window.scrollY > 30) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    };
+
+    return (
+        <div className="header-container">
+            <header className="header" onToggle={toggleExplanation}>
+                <div className="logo">
+                    <img src={logo} alt="" />
+                </div>
+
+                <div className="nav-bar">
+                    <ul className="links">
+                        <li>
+                            <Link to="/home" className="navBar-link">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/about" className="navBar-link">
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/service" className="navBar-link">
+                                Service
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/blog" className="navBar-link">
+                                Blog
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/contact" className="navBar-link">
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+
+                    <div
+                        className="brief-explanation"
+                        onClick={toggleExplanation}
+                    >
+                        <div className="menu"></div>
+                        <div className="menu"></div>
+                        <div className="menu1 menu"></div>
+                    </div>
+
+                    <div className="navbar-dropdown" onClick={toggleNavigation}>
+                        <div className="dropdown"></div>
+                        <div className="dropdown"></div>
+                        <div className="dropdown"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div>
+                {showExplanation && <Explanation onClose={closeExplanation} />}
+            </div>
+
+            <div>
+                {showNavigation && <Navigation onClose={closeNavigation} />}
+            </div>
+        </div>
+    );
+}
+
+function Navigation({ onClose }) {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const styles = {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh",
+        width: "100%",
+    };
+
+    const imageStyle = {
+        width: "2rem",
+        padding: "2rem 0",
+        cursor: "pointer",
+        transition: "all 0.6s ease-in-out",
+        filter: "brightness(5)",
+        transform: isHovered ? "rotate(180deg)" : "rotate(0deg)",
+    };
+    return (
+        <div className="navigation-container navbar-sticky">
+            <div className="navigation-content">
+                <div className="close" onClick={onClose}>
+                    <img
+                        className="rotate-img"
+                        src={close}
+                        alt="close"
+                        style={imageStyle}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    />
+                </div>
+                <div className="mobile-navigation" style={styles}>
+                    <div className="filter-reduce">
+                        <ul>
+                            <li>
+                                <Link to="/home" className="mobile-link">
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/about" className="mobile-link">
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/service" className="mobile-link">
+                                    Service
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/blog" className="mobile-link">
+                                    Blog
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/contact" className="mobile-link">
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                        <div className="media2">
+                            <div className="media-img">
+                                <img src={twitter} id="twitter" alt="twitter" />
+                                <img src={facebook} alt="facebook" />
+                                <img src={instagram} alt="instagram" />
+                            </div>
+                            <h2>&copy; 2025 All Rights Reserved</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function Explanation({ onClose }) {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const imageStyle = {
+        width: "2rem",
+        padding: "2rem 0",
+        cursor: "pointer",
+        transition: "all 0.6s ease-in-out",
+        filter: "brightness(5)",
+        transform: isHovered ? "rotate(180deg)" : "rotate(0deg)",
+    };
+    return (
+        <div className="explanation-container  navbar-sticky">
+            <div className="explanation-content">
+                <div className="close" onClick={onClose}>
+                    <img
+                        className="rotate-img"
+                        src={close}
+                        alt="close"
+                        style={imageStyle}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    />
+                </div>
+                <div className="explanation">
+                    <div>
+                        <img src={logo} alt="logo" />
+                    </div>
+                    <div>
+                        <p>
+                            An advertising agency, often referred to as a
+                            creative agency, is a business dedicated to
+                            creating, planning, and handling advertising and
+                            sometimes other forms of promotion and marketing for
+                            its clients. An ad agency is generally independent
+                            from the client.
+                        </p>
+                    </div>
+                    <div className="media">
+                        <div className="media-img">
+                            <img src={twitter} id="twitter" alt="twitter" />
+                            <img src={facebook} alt="facebook" />
+                            <img src={instagram} alt="instagram" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+Navigation.propTypes = {
+    onClose: propTypes.func.isRequired,
+};
+
+Explanation.propTypes = {
+    onClose: propTypes.func.isRequired,
+};
+
+export default Header;
