@@ -61,7 +61,7 @@ function Header() {
         <div className="header-container">
             <header className="header" onToggle={toggleExplanation}>
                 <div className="logo">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="" className="logo" />
                 </div>
 
                 <div className="nav-bar">

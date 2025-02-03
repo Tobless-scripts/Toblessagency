@@ -36,6 +36,10 @@ body {
     z-index: 999;
 }
 
+.logo {
+    width: 5.5rem;
+}
+
 .nav-bar {
     display: flex;
     justify-content: space-evenly;
@@ -304,6 +308,9 @@ body {
 
     .explanation {
         padding: 1rem 3rem;
+    }
+    .logo {
+        width: 2.5rem;
     }
 }
 
