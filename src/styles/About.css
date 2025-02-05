@@ -188,7 +188,13 @@
         width: 100%;
     }
     .years {
-        bottom: -5%;
+        bottom: -9%;
+    }
+    .mission-content1 p {
+        font-size: 1rem;
+    }
+    .about-service-container {
+        margin-top: 3rem;
     }
 }
 
