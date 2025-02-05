@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: hsl(0, 0%, 90%);
+    background-color: hsl(0, 0%, 100%);
 }
 
 .header {
@@ -37,7 +37,7 @@ body {
 }
 
 .logo {
-    width: 5.5rem;
+    width: 4.5rem;
 }
 
 .nav-bar {
@@ -123,7 +123,7 @@ body {
 }
 
 .explanation-content {
-    width: 60%;
+    width: 70%;
     background-color: transparent;
     height: 100%;
     position: absolute;
@@ -141,7 +141,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 5rem;
-    width: 60%;
+    width: 70%;
     height: 100%;
     color: rgba(29, 31, 40, 0.8);
     font-weight: 300;

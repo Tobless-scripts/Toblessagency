@@ -1,0 +1,36 @@
+.particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(26, 28, 36);
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So clicks go through to content */
+}
+
+.particle {
+    position: absolute;
+    background-color: rgb(2, 207, 201);
+    border-radius: 50%;
+    animation: moveAround 3s infinite linear;
+}
+
+/* Random continuous movement */
+@keyframes moveAround {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(var(--moveX), var(--moveY));
+    }
+}

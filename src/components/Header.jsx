@@ -230,7 +230,7 @@ function Explanation({ onClose }) {
                 </div>
                 <div className="explanation">
                     <div>
-                        <img src={logo} alt="logo" />
+                        <img src={logo} alt="logo" className="logo" />
                     </div>
                     <div>
                         <p>

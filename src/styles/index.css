@@ -1,0 +1,37 @@
+.breadcrumb-container {
+    background-color: rgb(2, 207, 201);
+}
+
+.breadcrumb-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.breadcrumb-content1 h1 {
+    line-height: 34px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+.breadcrumb-content2 {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.img1 {
+    width: 1.5rem;
+}
+
+.img2 {
+    width: 2rem;
+    height: 1rem;
+}
+
+.breadcrumb-content2 p {
+    color: white;
+}
