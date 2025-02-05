@@ -475,12 +475,6 @@
         text-align: center;
     }
 
-    .experience {
-        grid-template-columns: repeat(1, 1fr);
-        gap: 3rem;
-        margin: 0;
-    }
-
     .whatFlex {
         grid-template-columns: repeat(1, 1fr);
         text-align: center;
@@ -526,6 +520,13 @@
     .moveDown,
     .moveDown2 {
         transform: translateY(0);
+    }
+
+    .experience {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        margin: 0;
+        text-align: left;
     }
 }
 

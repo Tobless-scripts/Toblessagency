@@ -312,6 +312,10 @@ body {
     .logo {
         width: 2.5rem;
     }
+    .header,
+    .header.sticky {
+        padding: 1rem 3rem;
+    }
 }
 
 @media screen and (max-width: 850px) {
