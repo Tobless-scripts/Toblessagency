@@ -1,0 +1,143 @@
+.business-resource-container {
+    padding: 5rem 3rem 0 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+}
+
+.business-resource-content1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.business-resource-content1 h1 {
+    color: rgb(29, 31, 40);
+    font-weight: 700;
+    line-height: 47px;
+    font-size: 2.25rem;
+    width: 60%;
+    text-align: center;
+}
+
+.business-resource-content2 {
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+}
+
+.business-resource-services {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+    align-items: center;
+    background-color: rgb(2, 207, 201);
+    color: black;
+    padding: 3rem 2rem;
+    position: relative;
+}
+
+.black-bg {
+    background-color: rgb(29, 31, 40);
+    color: white;
+}
+
+.white-bg {
+    background-color: white;
+    color: black;
+}
+
+.business-resource-services h1 {
+    font-weight: 700;
+    line-height: 35px;
+    font-size: 2rem;
+}
+
+.business-resource-services p {
+    font-weight: 300;
+    line-height: 29px;
+    font-size: 1.125rem;
+}
+
+.business-resource-services button {
+    font-weight: 600;
+    line-height: 21px;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border: none;
+    transition: all 0.7s ease-in-out;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: white;
+    color: black;
+}
+
+.business-resource-services button:hover {
+    background-color: black;
+    color: white;
+}
+
+.black-bg button {
+    background-color: rgb(2, 207, 201);
+    color: black;
+}
+
+.black-bg button:hover {
+    color: black;
+    background-color: white;
+}
+
+.white-bg button {
+    background-color: black;
+    color: white;
+    padding: 1rem 1.5rem;
+}
+
+.white-bg button:hover {
+    background-color: rgb(2, 207, 201);
+    color: black;
+}
+
+.business-services {
+    position: absolute;
+    bottom: 10%;
+    width: 50%;
+    right: 7%;
+    text-align: right;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 7rem;
+    flex-direction: column;
+}
+
+.business-services h1 {
+    font-weight: 700;
+    line-height: 50px;
+    font-size: 2.25rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .business-resource-content2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .business-resource-content1 h1 {
+        width: 100%;
+        font-size: 1.7rem;
+        line-height: normal;
+    }
+    .business-services {
+        position: static;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+}
