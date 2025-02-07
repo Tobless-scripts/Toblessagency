@@ -68,6 +68,9 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 3rem;
     }
+    .maps {
+        padding: 0;
+    }
 }
 
 /* ContactForm.css */
