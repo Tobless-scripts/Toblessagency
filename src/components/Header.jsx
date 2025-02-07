@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import close from "../assets/closeMenu.svg";
 import "../styles/Header.css";
 import { useState } from "react";
@@ -57,6 +57,13 @@ function Header() {
         });
     };
 
+    const links = document.querySelectorAll(".navBar-link");
+    links.forEach((link) => {
+        if (link) {
+            link.classList.add("border-bottom");
+        }
+    });
+
     return (
         <div className="header-container">
             <header className="header" onToggle={toggleExplanation}>
@@ -67,29 +74,64 @@ function Header() {
                 <div className="nav-bar">
                     <ul className="links">
                         <li>
-                            <Link to="/home" className="navBar-link">
+                            <NavLink
+                                to="/home"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "navBar-link active"
+                                        : "navBar-link"
+                                }
+                            >
                                 Home
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/about" className="navBar-link">
+                            <NavLink
+                                to="/about"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "navBar-link active"
+                                        : "navBar-link"
+                                }
+                            >
                                 About
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/service" className="navBar-link">
+                            <NavLink
+                                to="/service"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "navBar-link active"
+                                        : "navBar-link"
+                                }
+                            >
                                 Service
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/blog" className="navBar-link">
+                            <NavLink
+                                to="/blog"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "navBar-link active"
+                                        : "navBar-link"
+                                }
+                            >
                                 Blog
-                            </Link>
+                            </NavLink>
                         </li>
                         <li>
-                            <Link to="/contact" className="navBar-link">
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "navBar-link active"
+                                        : "navBar-link"
+                                }
+                            >
                                 Contact
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
 
@@ -164,29 +206,64 @@ function Navigation({ onClose }) {
                     <div className="filter-reduce">
                         <ul>
                             <li>
-                                <Link to="/home" className="mobile-link">
+                                <NavLink
+                                    to="/home"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "mobile-link active"
+                                            : "mobile-link"
+                                    }
+                                >
                                     Home
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/about" className="mobile-link">
+                                <NavLink
+                                    to="/about"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "mobile-link active"
+                                            : "mobile-link"
+                                    }
+                                >
                                     About
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/service" className="mobile-link">
+                                <NavLink
+                                    to="/service"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "mobile-link active"
+                                            : "mobile-link"
+                                    }
+                                >
                                     Service
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/blog" className="mobile-link">
+                                <NavLink
+                                    to="/blog"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "mobile-link active"
+                                            : "mobile-link"
+                                    }
+                                >
                                     Blog
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/contact" className="mobile-link">
+                                <NavLink
+                                    to="/contact"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "mobile-link active"
+                                            : "mobile-link"
+                                    }
+                                >
                                     Contact
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                         <div className="media2">

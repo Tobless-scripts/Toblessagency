@@ -22,7 +22,7 @@
     position: absolute;
     background-color: rgb(2, 207, 201);
     border-radius: 50%;
-    animation: moveAround 3s infinite linear;
+    animation: moveAround 1s infinite linear;
 }
 
 /* Random continuous movement */

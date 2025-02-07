@@ -1,9 +1,22 @@
 import "../styles/Footer.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Partner1 from "../../public/logo-big.png";
+import Partner2 from "../../public/logo.png";
+import Partner3 from "../../public/logo.svg";
+import Partner4 from "../../public/logo2.png";
 
 function Footer() {
     return (
         <footer>
+            <div className="partners">
+                <p>Trusted By Big ones</p>
+                <div className="partners-img">
+                    <img src={Partner1} alt="partner" />
+                    <img src={Partner2} alt="partner" />
+                    <img src={Partner3} alt="partner" />
+                    <img src={Partner4} alt="partner" />
+                </div>
+            </div>
             <div className="footer">
                 <div className="foot-help">
                     <div className="foot-text">
@@ -17,29 +30,64 @@ function Footer() {
                         <h2>Navigation</h2>
                         <ul>
                             <li>
-                                <Link to="/home" className="footer-link">
+                                <NavLink
+                                    to="/home"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "footer-link active"
+                                            : "footer-link"
+                                    }
+                                >
                                     Home
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/about" className="footer-link">
+                                <NavLink
+                                    to="/about"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "footer-link active"
+                                            : "footer-link"
+                                    }
+                                >
                                     About
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/service" className="footer-link">
+                                <NavLink
+                                    to="/service"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "footer-link active"
+                                            : "footer-link"
+                                    }
+                                >
                                     Service
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/blog" className="footer-link">
+                                <NavLink
+                                    to="/blog"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "footer-link active"
+                                            : "footer-link"
+                                    }
+                                >
                                     Blog
-                                </Link>
+                                </NavLink>
                             </li>
                             <li>
-                                <Link to="/contact" className="footer-link">
+                                <NavLink
+                                    to="/contact"
+                                    className={({ isActive }) =>
+                                        isActive
+                                            ? "footer-link active"
+                                            : "footer-link"
+                                    }
+                                >
                                     Contact
-                                </Link>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

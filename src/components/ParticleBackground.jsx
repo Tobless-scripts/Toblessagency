@@ -6,7 +6,7 @@ function ParticleBackground() {
     const containerRef = useRef(null);
 
     useEffect(() => {
-        const numParticles = 150; // Number of particles
+        const numParticles = 100; // Number of particles
         const container = containerRef.current;
 
         for (let i = 0; i < numParticles; i++) {

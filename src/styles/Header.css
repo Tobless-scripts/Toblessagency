@@ -82,7 +82,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.navBar-link:hover::after {
+.navBar-link.active::after {
     width: 8px;
     height: 8px;
 }
@@ -226,6 +226,10 @@ body {
     padding: 0 0 1rem 0;
     position: relative;
     text-align: left;
+}
+
+.mobile-link.active {
+    color: rgb(2, 207, 201);
 }
 
 .media2 {
