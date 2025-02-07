@@ -107,6 +107,9 @@ footer {
 }
 
 @media screen and (max-width: 860px) {
+    footer {
+        padding: 5rem 0;
+    }
     .footer,
     .footer-links {
         grid-template-columns: repeat(1, 1fr);

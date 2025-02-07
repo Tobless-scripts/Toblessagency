@@ -111,14 +111,14 @@ function Header() {
                         </li>
                         <li>
                             <NavLink
-                                to="/blog"
+                                to="/project"
                                 className={({ isActive }) =>
                                     isActive
                                         ? "navBar-link active"
                                         : "navBar-link"
                                 }
                             >
-                                Blog
+                                Projects
                             </NavLink>
                         </li>
                         <li>
@@ -243,14 +243,14 @@ function Navigation({ onClose }) {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/blog"
+                                    to="/project"
                                     className={({ isActive }) =>
                                         isActive
                                             ? "mobile-link active"
                                             : "mobile-link"
                                     }
                                 >
-                                    Blog
+                                    Projects
                                 </NavLink>
                             </li>
                             <li>

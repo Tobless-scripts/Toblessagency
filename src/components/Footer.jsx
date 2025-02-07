@@ -67,14 +67,14 @@ function Footer() {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/blog"
+                                    to="/project"
                                     className={({ isActive }) =>
                                         isActive
                                             ? "footer-link active"
                                             : "footer-link"
                                     }
                                 >
-                                    Blog
+                                    Projects
                                 </NavLink>
                             </li>
                             <li>
