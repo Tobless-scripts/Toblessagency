@@ -141,13 +141,17 @@ function Header() {
                     >
                         <div className="menu"></div>
                         <div className="menu"></div>
-                        <div className="menu1 menu"></div>
+                        <div className="menu"></div>
                     </div>
 
-                    <div className="navbar-dropdown" onClick={toggleNavigation}>
-                        <div className="dropdown"></div>
-                        <div className="dropdown"></div>
-                        <div className="dropdown"></div>
+                    <div
+                        className="navbar-dropdown"
+                        onClick={toggleNavigation}
+                        id="menu-toggle"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </header>

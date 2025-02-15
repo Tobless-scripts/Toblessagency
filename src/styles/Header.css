@@ -151,8 +151,18 @@ body {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-dropdown {
+#menu-toggle {
     display: none;
+    flex-direction: column;
+    gap: 0.3125rem;
+    cursor: pointer;
+}
+
+#menu-toggle span {
+    background: black;
+    transition: 0.3s;
+    height: 0.24rem;
+    width: 1.875rem;
 }
 
 .mobile-navigation {
@@ -320,32 +330,14 @@ body {
     .header.sticky {
         padding: 1rem 3rem;
     }
+    #menu-toggle {
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 850px) {
     .brief-explanation {
         display: none;
-    }
-
-    .navbar-dropdown {
-        background-color: transparent;
-        width: 2.8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 2.8rem;
-        gap: 0.1rem;
-        cursor: pointer;
-        padding: 0 0.2rem;
-        border-radius: 50%;
-        border: 2px solid rgb(2, 207, 201);
-    }
-
-    .dropdown {
-        background-color: black;
-        width: 80%;
-        height: 5%;
     }
 
     .links {
